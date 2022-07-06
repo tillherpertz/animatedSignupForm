@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Project | Animated Signup Form</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/less" href="style.less">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400;900&display=swap" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/less@4" ></script>
+    </head>
+    <body>
+        <main>
+            <div class="content-wrap is-default">
+                <div class="signin-form">
+                    <h1>Sign In</h1>
+                    <form>
+                        <label for="username">Username or email</label>
+                        <input type="text" id="username" name="username" spellcheck="false">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" spellcheck="false">
+                    </form>
+                    <div class="submit-wrap">
+                        <button type="submit" class="submit is-default">Sign in</button>
+                        <a href="#" id="forgot" >Forgot your password?</a>
+                    </div>
+                    <div class="register-hint">
+                        <h2>Don't have an account?</h2>
+                        <a href="#" id="signup">Sign Up</a>
+                    </div>
+                </div>
+                <div class="signin-success" style="display: none;">
+                    <img src="iconmonstr-check-mark-16.svg" width="50" height="50" alt="success icon">
+                    <h2>Success!</h2>
+                </div>
+                <div class="form-shadow is-default"></div>
+            </div>
+        </main>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="script.js" crossorigin="anonymous"></script>
+    </body>
+</html>
