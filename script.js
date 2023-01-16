@@ -3,11 +3,11 @@
 const correctUser = 'bindernoisi';
 const correctPass = 'test';
 
-
 // Submit form on button click and check for right or wrong inputs
 
-$('button.submit').click(function(){
-    if ($(this).hasClass('is-default')){
+// Empty submit function
+function submitForm() {
+    if ($('.content-wrap').hasClass('is-default')) {
         if ($('input#username').val().toLowerCase() == correctUser && $('input#password').val() == correctPass) {
             $('.content-wrap').removeClass('is-default');
             $('.content-wrap').addClass('is-success');
@@ -20,11 +20,19 @@ $('button.submit').click(function(){
             $('button.submit').addClass('is-failure');
             $('button.submit').html('Try again');
         }
-    } else if ($(this).hasClass('is-failure')) {
+    } else if ($('.content-wrap').hasClass('is-failure')) {
         $('.content-wrap').removeClass('is-failure')
         $('.content-wrap').addClass('is-default')
         $('button.submit').removeClass('is-failure');
         $('button.submit').addClass('is-default');
         $('button.submit').html('Sign in');
     }
-})
+}
+
+// Submit form when pressing enter
+
+function submitFormEnter(event) {
+    if (event.keyCode === 13) {
+        submitForm();
+    }
+}
